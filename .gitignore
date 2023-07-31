@@ -1,3 +1,4 @@
 # Cargo
 Cargo.lock
-*/target/
+*/target/**
+aoc22/target/**
