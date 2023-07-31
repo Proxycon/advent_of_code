@@ -6,7 +6,7 @@ pub fn d02(input: &str){
     let mut points = 0;
     for line in lines{
         let moves: Vec<&str> = line.split_whitespace().collect();
-        points += rps::evaluate_match1(moves[0], moves[1])
+        points += evaluate_match1(moves[0], moves[1])
     }
     println!("#d02 - 1\nexpected point in standard strategy: {}", points)
 }
