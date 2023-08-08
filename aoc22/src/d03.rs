@@ -27,7 +27,7 @@ pub fn d03_02(input: &str){
     let mut set: HashSet<char> = HashSet::new();
 
     for (i, line) in lines.enumerate() {
-        println!(" group counter: {}", i % 3);
+        // println!(" group counter: {}", i % 3);
         if i % 3 == 0 { // after each group
             // println!("{:#?}", set);
             if !set.is_empty(){
