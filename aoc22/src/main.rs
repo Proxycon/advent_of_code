@@ -2,6 +2,7 @@ mod d01;
 mod d02;
 mod d03;
 mod d04;
+mod d05;
 
 fn main() {
     d01::d01("inputs/input1.txt");
@@ -12,6 +13,9 @@ fn main() {
     d03::d03_02("inputs/input3.txt");
     d04::d04_01("inputs/input4.txt");
     d04::d04_02("inputs/input4.txt");
+    //d05::_test();
+    d05::d05_01("inputs/input5.txt");
+    //d04::d04_02("inputs/input4.txt");
 }
 
 
