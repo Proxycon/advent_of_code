@@ -15,7 +15,7 @@ fn main() {
     d04::d04_02("inputs/input4.txt");
     //d05::_test();
     d05::d05_01("inputs/input5.txt");
-    //d04::d04_02("inputs/input4.txt");
+    d05::d05_02("inputs/input5.txt");
 }
 
 
