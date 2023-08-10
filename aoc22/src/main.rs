@@ -3,6 +3,7 @@ mod d02;
 mod d03;
 mod d04;
 mod d05;
+mod d06;
 
 fn main() {
     d01::d01("inputs/input1.txt");
@@ -16,6 +17,9 @@ fn main() {
     //d05::_test();
     d05::d05_01("inputs/input5.txt");
     d05::d05_02("inputs/input5.txt");
+
+    d06::d06_01("inputs/input6.txt");
+    d06::d06_02("inputs/input6.txt");
 }
 
 

@@ -95,7 +95,11 @@ fn move_multiple_crates(
     n: usize,
 ) {
     let at = stacks.get_mut(from).unwrap().len() - n;
-    let tail = &mut stacks.get_mut(from).unwrap().drain(at..).collect::<Vec<char>>();
+    let tail = &mut stacks
+        .get_mut(from)
+        .unwrap()
+        .drain(at..)
+        .collect::<Vec<char>>();
     stacks.get_mut(to).unwrap().append(tail);
 }
 

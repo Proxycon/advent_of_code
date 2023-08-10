@@ -39,5 +39,8 @@ pub fn d01_2(input: &str) {
     elfs.sort();
     elfs.reverse();
     println!("#d01 - 2\nelfs: {:#?}", vec![elfs[0], elfs[1], elfs[2]]);
-    println!("calories carried by top 3 elfs: {:#?}", elfs[..3].iter().sum::<u32>())
+    println!(
+        "calories carried by top 3 elfs: {:#?}",
+        elfs[..3].iter().sum::<u32>()
+    )
 }
