@@ -2,5 +2,7 @@
     "rust-analyzer.linkedProjects": [
         "./aoc22/Cargo.toml",
         "./aoc22/Cargo.toml"
-    ]
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic"
 }
