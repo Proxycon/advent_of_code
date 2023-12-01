@@ -2,3 +2,6 @@
 Cargo.lock
 */target/**
 aoc22/target/**
+aoc23/rust/target/**
+aoc23/rust/.idea/**
+
