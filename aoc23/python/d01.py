@@ -1,3 +1,5 @@
+from curses.ascii import isdigit
+import re
 
 numbers = {
     "zero": "0",
@@ -9,25 +11,11 @@ numbers = {
     "six": "6",
     "seven": "7",
     "eight": "8",
-    "nine": "9",
-    "ten": "10",
-    "eleven": "11",
-    "twelve": "12",
-    "thirteen": "13",
-    "fourteen": "14",
-    "fifteen": "15",
-    "sixteen": "16",
-    "seventeen": "17",
-    "eighteen": "18",
-    "nineteen": "19",
-    "twenty": "20",
-    "thirty": "30",
-    "forty": "40",
-    "fifty": "50",
+    "nine": "9"
 }
 
 def d01p1():
-    filename = "aoc23/inputs/input01.txt"
+    filename = "inputs/input01.txt"
     sum = 0
 
     with open(filename) as file:
@@ -39,17 +27,25 @@ def filter_first_and_last_number(line):
     digits = list(filter(str.isdigit, line))
     return int(digits[0]+ digits[-1]) if len(digits) > 0 else 0
 
-def replace_filter_first_and_last_number(line):
+def replace_filter_first_and_last_number(line: str):
+    digits = []
+    parsed = line
+    while len(parsed) > 0:
+        if parsed[0].isdigit():
+            digits.append(parsed[0])
+            parsed = parsed[1:]
+            continue
+        for key, value in numbers.items():
+            res = re.findall(fr'(^{key})', parsed)
+            if len(res) > 0:
+                digits.append(value)
+        parsed = parsed[1:]
 
-    
-    for key, value in reversed(numbers.items()):
-        line = line.replace(key, value)
-    digits = list(filter(str.isdigit, line))
     print("parsed {} to {} and took {}".format(line, digits, digits[0]+ digits[-1]))
     return int(digits[0]+ digits[-1])
 
 def d01p2():
-    filename = "aoc23/inputs/input01.txt"
+    filename = "inputs/input01.txt"
     sum = 0
 
     with open(filename) as file:
@@ -60,5 +56,5 @@ def d01p2():
 
 
 if __name__ == "__main__":
-    d01p1()
+    # d01p1()
     d01p2()
